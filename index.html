@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>hams</title>
+  <link rel="stylesheet" href="css/v1.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="nav-button">
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+  </div>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+    $(function (){
+      $('.container').on('click', '.nav-button', function () {
+          $(this).parent('.container').toggleClass('nav-exposed');
+      });
+    });
+  </script>
+</body>
+</html>

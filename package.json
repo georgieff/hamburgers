@@ -1,0 +1,19 @@
+{
+  "name": "hamburgers",
+  "version": "0.0.0",
+  "description": "Animated hamburgers like buttons",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "serve-static": "~1.4.3",
+    "connect": "~3.1.0"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/georgieff/hamburgers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/georgieff/hamburgers/issues"
+  },
+  "homepage": "https://github.com/georgieff/hamburgers"
+}

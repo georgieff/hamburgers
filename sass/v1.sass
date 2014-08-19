@@ -1,0 +1,120 @@
+*
+  -webkit-box-sizing: border-box
+  -ms-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+
+body
+  background: #010101
+  margin: 0
+  padding: 40px
+
+.container
+  background: white
+  margin: 0 auto
+  min-height: 200px
+  padding: 50px
+  text-align: center
+
+$line-width: 170px
+$line-height: 30px
+$line-spacing: 20px
+
+.nav-button
+  position: relative
+  padding-left: 0px
+  margin: 0 auto
+  height: $line-height*3 + $line-spacing*2
+  z-index: 10
+  line-height: 10px
+  font-size: 1px
+  vertical-align: text-top
+  width: $line-width
+
+.nav-button .hamburger
+  width: $line-width
+  height: $line-height*3 + $line-spacing*2
+  position: relative
+  overflow: visible
+  line-height: $line-height*3 + $line-spacing*2
+  font-size: 1px
+  float: left
+  cursor: pointer
+
+.nav-button .hamburger .line
+  position: absolute
+  background-color: #252425
+  overflow: hidden
+  z-index: 1
+  width: $line-width
+  height: $line-height
+  left: 0px
+  transition-property: transform
+  transition-duration: 0.8s
+  transition-delay: 0.2s
+  transition-timing-function: cubic-bezier(1, 0, 0, 1)
+
+@media (max-width:992px)
+  .nav-button .hamburger .line
+
+
+.nav-button .hamburger .line:after
+  content: ' '
+  position: absolute
+  top: 0
+  left: 0
+  display: block
+  width: 100%
+  transform: scaleX(0)
+  transform-origin: 100% 0%
+  height: $line-height
+  background: #a4a4a4
+
+.nav-button .hamburger .line:nth-child(1)
+  transform-origin: 0px 1.5px
+  top: 0px
+  z-index: 2
+
+.nav-button .hamburger .line:nth-child(1):after
+  transition-property: transform
+  transition-duration: 0.4s
+  transition-delay: 0
+  transition-timing-function: cubic-bezier(1, 0, 0, 1)
+
+.nav-button .hamburger .line:nth-child(2)
+  top: $line-height + $line-spacing
+  z-index: 1
+  transition: opacity 0.4s linear 0.5s
+
+.nav-button .hamburger .line:nth-child(2):after
+  transition-property: transform
+  transition-duration: 0.4s
+  transition-delay: 0.1s
+  transition-timing-function: cubic-bezier(1, 0, 0, 1)
+
+.nav-button .hamburger .line:nth-child(3)
+  transform-origin: 0px 1.5px
+  top: $line-height*2 + $line-spacing*2
+  z-index: 3
+
+.nav-button .hamburger .line:nth-child(3):after
+  transition-property: transform
+  transition-duration: 0.4s
+  transition-delay: 0.2s
+  transition-timing-function: cubic-bezier(1, 0, 0, 1)
+
+.nav-button .hamburger:hover .line:after
+  width: 100%
+  transform: scaleX(1)
+  transform-origin: 0% 0%
+
+.nav-exposed .nav-button div.hamburger .line:nth-child(1)
+  transform: translateX(20px) translateY(-2px) rotate(45deg)
+
+.nav-exposed .nav-button div.hamburger .line:nth-child(2)
+  transition: opacity 0.4s linear 0s
+  opacity: 0
+
+.nav-exposed .nav-button .hamburger .line:nth-child(3)
+  transform: translateY(20px) rotate(-45deg)
